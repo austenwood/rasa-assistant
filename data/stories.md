@@ -29,3 +29,7 @@
 ## bot challenge
 * bot_challenge
   - utter_iamabot
+
+## academic advising
+* academic_advising
+  - utter_academic_advising

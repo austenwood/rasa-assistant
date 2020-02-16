@@ -54,3 +54,8 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+## intent:academic_advising
+- advising
+- I need to talk to an advisor
+- can I speak with an academic advisor?
