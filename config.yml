@@ -10,3 +10,5 @@ policies:
     max_history: 1
   - name: KerasPolicy
   - name: MappingPolicy
+  - name: TwoStageFallbackPolicy
+    nlu_threshold: 0.8
