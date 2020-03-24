@@ -1,45 +1,56 @@
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - academic_advising
-
 actions:
-  - utter_greet
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
-  - utter_goodbye
-  - utter_iamabot
-  - utter_academic_advising
-
+- utter_academic_advising
+- utter_cheer_up
+- utter_did_that_help
+- utter_goodbye
+- utter_graduation
+- utter_graduation_advising
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_out_of_scope
+entities:
+- person_name
+intents:
+- inform
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- out_of_scope
+- academic_advising
+- graduation
+- graduation_advising
 responses:
-  utter_greet:
-    - text: "Hey! How are you?"
-
-  utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-    - text: "Did that help you?"
-
-  utter_happy:
-    - text: "Great, carry on!"
-
-  utter_goodbye:
-    - text: "Bye"
-
-  utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
-
   utter_academic_advising:
-    - text: "You can schedule an appointment with an academic advisor by going here: https://chicostate.force.com/appointments/login?"
-
+  - text: 'You can schedule an appointment with an academic advisor by going here:
+      https://chicostate.force.com/appointments/login?'
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Bye
+  utter_graduation:
+  - text: 'You can register for graduation by going here: https://www.csuchico.edu/gradadvising/graduation-application.shtml'
+  utter_graduation_advising:
+  - text: 'You can schedule an appointment with a graduation advisor by going here:
+      https://chicostate.force.com/appointments/login?'
+  utter_greet:
+  - text: Hey {person_name}! How are you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_out_of_scope:
+  - text: Sorry, I can’t handle that request.
 session_config:
-  session_expiration_time: 60
   carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  person_name:
+    type: text
